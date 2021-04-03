@@ -143,8 +143,44 @@ if __name__=="__main__":
             speak("3")
             speak("2")
             speak("1")
-            ec.capture(0, "Jarvis Camera ", "/images/"+res+".jpg")
+            ec.capture(0, "Olivia Camera ", "/images/"+res+".jpg")
             speak("Picture taken!")
+        
+        elif "where is" in query:
+            query = query.replace("where is", "")
+            location = query
+            speak("User asked to Locate")
+            speak(location)
+            webbrowser.open("https://www.google.nl/maps/place/" + location + "")
+            
+        elif "weather" in query:
+             
+            # Google Open weather website
+            # to get API of Open weather
+            #Sign in to openweathermap website to get API
+            api_key = "your-api-key"
+            base_url = "http://api.openweathermap.org/data/2.5/weather?"
+            speak(" City name ")
+            print("City name : ")
+            city_name = takeCommand()
+            complete_url = base_url + "appid=" + api_key + "&q=" + city_name
+            response = requests.get(complete_url)
+            x = response.json()
+             
+            if x["cod"] != "404":
+                y = x['main']
+                current_temperature = y["temp"]
+                current_pressure = y["pressure"]
+                current_humidiy = y["humidity"]
+                z = x["weather"]
+                weather_description = z[0]["description"]
+                speak(" Temperature (in kelvin unit) = " +
+                        str(current_temperature)+"\n atmospheric pressure (in hPa unit) ="+
+                        str(current_pressure) +"\n humidity (in percentage) = " +
+                        str(current_humidiy) +"\n description = " +str(weather_description))
+             
+            else:
+                speak(" City Not Found ")
             
         elif "quit" in query or "close" in query:
             exit()
