@@ -10,6 +10,7 @@ Functionalities added so far:
 5. Can send email to the people mentioned in the directory
 6. Captures a photograph of you
 7. Tells the weather of the place mentioned
+8. Play music
 
 Tkinter GUI:
 
