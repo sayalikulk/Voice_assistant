@@ -1,6 +1,5 @@
-# pyttsx3 is a text-to-speech conversion library in Python.
 import pyttsx3
-# For acquiring the current date and time
+import googlemaps
 import datetime
 import speech_recognition as sr
 import wikipedia 
@@ -11,6 +10,8 @@ import ctypes
 import time
 import subprocess
 import string
+import PyDictionary
+import requests,json
 import random
 from ecapture import ecapture as ec
 
@@ -179,8 +180,28 @@ def work():
             else:
                 speak(" City Not Found ")
             
+        elif "meaning" in query:
+            dic=PyDictionary.PyDictionary()
+            speak("Say the word you wanna find meaning of")
+            word=takeCommand()
+            ans=dic.meaning(word)
+            print(ans)
+            for state in ans:
+                print(ans[state])
+                speak("the meaning in "+state+ " form is" + str(ans[state]))
+        
+        elif "distance" in query:
+            speak("Tell the cities you wanna know distance between")
+            speak("First city")
+            city1=takeCommand()
+            speak("Second city")
+            city2=takeCommand()
+            webbrowser.open("https://www.google.nl/maps/dir/" + city1 + "/"+city2)
+        
         elif "quit" in query or "close" in query:
             exit()
+        
+        
 
 #Main function 
 if __name__=="__main__":
