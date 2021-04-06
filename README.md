@@ -10,7 +10,10 @@ Functionalities added so far:
 5. Can send email to the people mentioned in the directory
 6. Captures a photograph of you
 7. Tells the weather of the place mentioned
-8. Play music
+8. Plays music
+9. Opens the google maps and displays the road and distance between two cities given as input
+10. Tells the meaning of any word from the dictionary
+11. Opens any software in the computer
 
 Tkinter GUI:
 
