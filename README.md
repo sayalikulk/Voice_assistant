@@ -13,8 +13,13 @@ Functionalities added so far:
 
 Tkinter GUI:
 
-![image](https://user-images.githubusercontent.com/58951571/113720257-14d77b80-970c-11eb-80d5-5907e8bb4aea.png)
+The home page:
 
-![image](https://user-images.githubusercontent.com/58951571/113720291-1dc84d00-970c-11eb-8091-5664e507187f.png)
+![image](https://user-images.githubusercontent.com/58951571/113720482-4b14fb00-970c-11eb-955e-9cb7e68ee79f.png)
+
+The Assistant page:
+
+![image](https://user-images.githubusercontent.com/58951571/113720424-3b95b200-970c-11eb-9460-7ce1e53bd1f3.png)
+
 
 
