@@ -77,10 +77,7 @@ def sendEmail(to, content):
     server.sendmail('your-email-id-here',mailDir[to],content)
     server.close()
 
-
-#Main function 
-if __name__=="__main__":
-    
+def work():
     wishMe()
     chromepath='C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
     while True:
@@ -184,5 +181,11 @@ if __name__=="__main__":
             
         elif "quit" in query or "close" in query:
             exit()
+
+#Main function 
+if __name__=="__main__":
+    work()
+    
+    
 
     
